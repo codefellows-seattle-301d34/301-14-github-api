@@ -10,4 +10,4 @@ $.ajax({
   .then(
     data => data.forEach(repo =>
       $('#results').append(`<h3>${repo.name}</h3><p>${repo.description}</p><hr>`)),
-    err => console.error(err.status, err.statusText, 'is the way my stuff is broken'));
+    err => console.error(`${err.status} ${err.statusText} is the way my stuff is broken.`));
